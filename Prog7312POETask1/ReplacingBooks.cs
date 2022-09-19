@@ -128,12 +128,17 @@ namespace Prog7312POETask1
             if (matches)
                 MessageBox.Show("Well done!! All of the books were in the correct order!" +
                                 "\nMaybe try make it harder by trying a higher difficulty.", "--CONGRATULATIONS!!--", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             else
                 MessageBox.Show("Oh no!! You did not put all of the books in the correct order :(" +
                                 "\nDon't let this discourage you from trying again!", "--OH NO!!--", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+            gameTimer.Stop();
             timerLbl.Text = "";
+            difficultPanel.Visible = true;
+            listBox1.Items.Clear();
             listBox2.Items.Clear();
+            _deweyDecimalList.Clear();
             return;
         }
         //*********************************************************ooo METHOD END ooo*********************************************************//
