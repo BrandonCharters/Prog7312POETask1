@@ -38,9 +38,9 @@
             this.richTextBox1.BackColor = System.Drawing.Color.AntiqueWhite;
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox1.Font = new System.Drawing.Font("Book Antiqua", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(235, 35);
+            this.richTextBox1.Location = new System.Drawing.Point(235, 45);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(430, 276);
+            this.richTextBox1.Size = new System.Drawing.Size(430, 349);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             // 
@@ -65,7 +65,7 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::Prog7312POETask1.Properties.Resources.Scroll2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(835, 400);
+            this.ClientSize = new System.Drawing.Size(835, 504);
             this.Controls.Add(this.exitRulesBtn);
             this.Controls.Add(this.richTextBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

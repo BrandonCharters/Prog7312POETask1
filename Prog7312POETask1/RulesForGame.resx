@@ -118,16 +118,18 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="richTextBox1.Text" xml:space="preserve">
-    <value>--Rules--
+    <value>--Game Rules--
 You are a new librarian whos first job is as follows:
 
-–Rearrange the jumbled up books on the left shelf onto the shelf on the right.(This is done by dragging and dropping the books with the cursor)
+–Rearrange the jumbled up books on the left shelf onto the right shelf. (This is done by dragging and dropping the books with the mouse cursor)
 
 –The books must be arranged from smallest to biggest based on the starting number in the dewey decimal system.
 
-–When you are ready, press the “Start” button.
+–When you are ready to play, press the “Start” button.
 
-–When you think the order you have put the books in is correct then press the “Done” button.
+–When you think the order of the books is correct then press the "Done" button.
+
+–If you want to play again then press the "Restart" button at anytime. 
 
 --GOODLUCK AND HAVE FUN!</value>
   </data>
