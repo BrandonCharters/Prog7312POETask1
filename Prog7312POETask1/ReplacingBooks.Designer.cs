@@ -52,12 +52,12 @@
             this.listBox1.BackColor = System.Drawing.Color.Tan;
             this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.listBox1.Font = new System.Drawing.Font("Book Antiqua", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox1.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 19;
+            this.listBox1.ItemHeight = 23;
             this.listBox1.Location = new System.Drawing.Point(49, 175);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(236, 287);
+            this.listBox1.Size = new System.Drawing.Size(236, 278);
             this.listBox1.TabIndex = 0;
             this.listBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.listBox1_MouseDown);
             // 
@@ -94,12 +94,12 @@
             this.listBox2.BackColor = System.Drawing.Color.Tan;
             this.listBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.listBox2.Font = new System.Drawing.Font("Book Antiqua", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox2.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 19;
+            this.listBox2.ItemHeight = 23;
             this.listBox2.Location = new System.Drawing.Point(570, 175);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(236, 287);
+            this.listBox2.Size = new System.Drawing.Size(236, 278);
             this.listBox2.TabIndex = 3;
             this.listBox2.DragDrop += new System.Windows.Forms.DragEventHandler(this.listBox2_DragDrop);
             this.listBox2.DragEnter += new System.Windows.Forms.DragEventHandler(this.listBox2_DragEnter);

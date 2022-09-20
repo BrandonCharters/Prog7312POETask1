@@ -50,8 +50,8 @@ namespace Prog7312POETask1
             //  If the easy is checked then the timer will be set to 30.
             //  If the medium is checked then the timer will be set to 20.
             //  If the hard is checked then the timer will be set to 15.
-            if (easyBtn.Checked) _timerValue = 30;
-            if (mediumBtn.Checked) _timerValue = 20;
+            if (easyBtn.Checked) _timerValue = 40;
+            if (mediumBtn.Checked) _timerValue = 25;
             if (hardBtn.Checked) _timerValue = 15;
             //Game timer will start after
             gameTimer.Start();
