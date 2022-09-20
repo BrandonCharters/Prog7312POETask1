@@ -49,7 +49,7 @@ namespace Prog7312POETask1
             }
 
             myNumbers += "."; //This is the space between the first and the second callNumber values
-            Call_Number = _random.Next(9,99); //generating the next callNumber to add next to the first one
+            Call_Number = _random.Next(9,999); //generating the next callNumber to add next to the first one
             myNumbers += Call_Number.ToString(); //Adding the 2 callNumbers
 
             string Author = " "; //This is the space between the callNumbers and the generated author name

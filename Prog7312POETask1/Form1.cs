@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace Prog7312POETask1
 {
@@ -57,6 +58,27 @@ namespace Prog7312POETask1
         private void exitAppBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+        //*********************************************************ooo METHOD END ooo*********************************************************//
+
+        /// <summary>
+        /// FormLoad event for when the form loads then theme music will play in the background of the game
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                //Declaring a variable named sndPlay which is equal to a sample song which has been embedded into the app.
+                SoundPlayer sndPlay = new SoundPlayer(Prog7312POETask1.Properties.Resources.SampleMusic);
+                //Plays the sound when the form loads, loops the sound
+                sndPlay.PlayLooping();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ": " + ex.StackTrace.ToString(), "Error");
+            }
         }
         //*********************************************************ooo METHOD END ooo*********************************************************//
     }

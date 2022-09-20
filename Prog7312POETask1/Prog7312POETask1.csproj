@@ -123,5 +123,8 @@
   <ItemGroup>
     <None Include="Resources\OpenBook3.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SampleMusic.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
