@@ -31,6 +31,7 @@ namespace Prog7312POETask1
         private string leftLblName;
 
         private int num;
+        private int currentScore = 0;
 
 
         private int difference;
@@ -211,20 +212,7 @@ namespace Prog7312POETask1
         
         private void GenerateNumbersBtn_Click(object sender, EventArgs e)
         {
-            panel1.Enabled = true;
-            
-            Random rnd = new Random();
-
-            num = rnd.Next(1, 10);
-
-            if (num % 2 == 0)
-            {
-                layout1();
-            }
-            else
-            {
-                layout2();
-            }
+            loadGame();
         }
 
         public void layout1()
@@ -258,7 +246,7 @@ namespace Prog7312POETask1
                 }
             }
 
-            //Create a keyset of all the values on the right side
+            //Create a keySet of all the values on the right side
             var keySet = questionGen.DeweyDecimalsDictionary
                 .Where(x => lblLstR
                     .Contains(x.Value))
@@ -356,16 +344,15 @@ namespace Prog7312POETask1
 
         private void restartGamebtn_Click(object sender, EventArgs e)
         {
-            if (leftLbl1.Text == "Question 1")
+            if (currentScore > 0)
             {
-                MessageBox.Show("No game active, cannot restart!", "--OOPS!!--", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                clearLbls();
+                MessageBox.Show($"Well done!! Thanks for playing!!" +
+                                        $"\nYour final score was: {currentScore}", "--WELL DONE!!--", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else
-            {
-                panel1.Enabled = true;
-                clearLbls();
-            }
+            panel1.Enabled = false;
+            clearBoxes();
+            currentScore = 0;
+            currentScoreLbl.Text = currentScore.ToString();
         }
 
         private void IdentifyingAreas_Load(object sender, EventArgs e)
@@ -456,15 +443,19 @@ namespace Prog7312POETask1
                         && dict[left3.Text] == right3.Text 
                         && dict[left4.Text] == right4.Text)
                     {
-                        MessageBox.Show("Well done!! All the answers were correct!" +
-                                        "\nTry again by pressing the start game button.", "--CONGRATULATIONS!!--", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        currentScore += 100;
+                        currentScoreLbl.Text = currentScore.ToString();
+                        MessageBox.Show("Well done!! All the answers were correct!", "--CONGRATULATIONS!!--", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        MessageBox.Show("Not all the questions were correct!", "--TRY AGAIN!!--", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        currentScore -= 50;
+                        currentScoreLbl.Text = currentScore.ToString();
+                        MessageBox.Show("Not all of the answers were correct!", "--TRY AGAIN!!--", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
-                    clearBoxes();
-                    panel1.Enabled = false;
+                    clearLbls();
+                    //panel1.Enabled = false;
+                    loadGame();
                 }
                 else
                 {
@@ -474,18 +465,41 @@ namespace Prog7312POETask1
                         && dict[right3.Text] == left3.Text 
                         && dict[right4.Text] == left4.Text)
                     {
-                        MessageBox.Show("Well done!! All the answers were correct!" +
-                                        "\nTry again by pressing the start game button.", "--CONGRATULATIONS!!--", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        currentScore += 100;
+                        currentScoreLbl.Text = currentScore.ToString();
+                        MessageBox.Show("Well done!! All the answers were correct!", "--CONGRATULATIONS!!--", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     }
                     else
                     {
-                        MessageBox.Show("Not all the questions were correct!", "--TRY AGAIN!!--", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        currentScore -= 50;
+                        currentScoreLbl.Text = currentScore.ToString();
+                        MessageBox.Show("Not all of the answers were correct!", "--TRY AGAIN!!--", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
-                    clearBoxes();
-                    panel1.Enabled = false;
+                    clearLbls();
+                    //panel1.Enabled = false;
+                    loadGame();
                 }
             }
 
+        }
+
+        public void loadGame()
+        {
+            panel1.Enabled = true;
+            
+            Random rnd = new Random();
+
+            num = rnd.Next(1, 10);
+
+            if (num % 2 == 0)
+            {
+                layout1();
+            }
+            else
+            {
+                layout2();
+            }
         }
     }
 }

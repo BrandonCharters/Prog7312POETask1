@@ -54,6 +54,8 @@
             this.GenerateNumbersBtn = new System.Windows.Forms.Button();
             this.restartGamebtn = new System.Windows.Forms.Button();
             this.doneBtn = new System.Windows.Forms.Button();
+            this.scoreLbl = new System.Windows.Forms.Label();
+            this.currentScoreLbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,7 +94,7 @@
             // 
             this.right4.AutoSize = true;
             this.right4.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Bold);
-            this.right4.Location = new System.Drawing.Point(155, 398);
+            this.right4.Location = new System.Drawing.Point(125, 404);
             this.right4.Name = "right4";
             this.right4.Size = new System.Drawing.Size(65, 17);
             this.right4.TabIndex = 21;
@@ -102,7 +104,7 @@
             // 
             this.right3.AutoSize = true;
             this.right3.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Bold);
-            this.right3.Location = new System.Drawing.Point(155, 305);
+            this.right3.Location = new System.Drawing.Point(125, 310);
             this.right3.Name = "right3";
             this.right3.Size = new System.Drawing.Size(65, 17);
             this.right3.TabIndex = 20;
@@ -112,7 +114,7 @@
             // 
             this.right2.AutoSize = true;
             this.right2.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Bold);
-            this.right2.Location = new System.Drawing.Point(155, 199);
+            this.right2.Location = new System.Drawing.Point(125, 208);
             this.right2.Name = "right2";
             this.right2.Size = new System.Drawing.Size(65, 17);
             this.right2.TabIndex = 19;
@@ -122,7 +124,7 @@
             // 
             this.left4.AutoSize = true;
             this.left4.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Bold);
-            this.left4.Location = new System.Drawing.Point(155, 381);
+            this.left4.Location = new System.Drawing.Point(125, 387);
             this.left4.Name = "left4";
             this.left4.Size = new System.Drawing.Size(56, 17);
             this.left4.TabIndex = 18;
@@ -132,7 +134,7 @@
             // 
             this.left3.AutoSize = true;
             this.left3.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.left3.Location = new System.Drawing.Point(155, 288);
+            this.left3.Location = new System.Drawing.Point(125, 293);
             this.left3.Name = "left3";
             this.left3.Size = new System.Drawing.Size(56, 17);
             this.left3.TabIndex = 17;
@@ -142,7 +144,7 @@
             // 
             this.left2.AutoSize = true;
             this.left2.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Bold);
-            this.left2.Location = new System.Drawing.Point(155, 182);
+            this.left2.Location = new System.Drawing.Point(125, 191);
             this.left2.Name = "left2";
             this.left2.Size = new System.Drawing.Size(56, 17);
             this.left2.TabIndex = 16;
@@ -273,7 +275,7 @@
             // 
             this.right1.AutoSize = true;
             this.right1.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Bold);
-            this.right1.Location = new System.Drawing.Point(155, 128);
+            this.right1.Location = new System.Drawing.Point(125, 117);
             this.right1.Name = "right1";
             this.right1.Size = new System.Drawing.Size(65, 17);
             this.right1.TabIndex = 3;
@@ -283,7 +285,7 @@
             // 
             this.left1.AutoSize = true;
             this.left1.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Bold);
-            this.left1.Location = new System.Drawing.Point(155, 111);
+            this.left1.Location = new System.Drawing.Point(125, 100);
             this.left1.Name = "left1";
             this.left1.Size = new System.Drawing.Size(56, 17);
             this.left1.TabIndex = 2;
@@ -369,9 +371,34 @@
             this.doneBtn.Name = "doneBtn";
             this.doneBtn.Size = new System.Drawing.Size(115, 34);
             this.doneBtn.TabIndex = 12;
-            this.doneBtn.Text = "Done";
+            this.doneBtn.Text = "Next";
             this.doneBtn.UseVisualStyleBackColor = false;
             this.doneBtn.Click += new System.EventHandler(this.doneBtn_Click);
+            // 
+            // scoreLbl
+            // 
+            this.scoreLbl.AutoSize = true;
+            this.scoreLbl.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.scoreLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.scoreLbl.Font = new System.Drawing.Font("Book Antiqua", 11.25F, System.Drawing.FontStyle.Bold);
+            this.scoreLbl.Location = new System.Drawing.Point(379, 638);
+            this.scoreLbl.Name = "scoreLbl";
+            this.scoreLbl.Size = new System.Drawing.Size(53, 21);
+            this.scoreLbl.TabIndex = 22;
+            this.scoreLbl.Text = "Score:";
+            // 
+            // currentScoreLbl
+            // 
+            this.currentScoreLbl.AutoSize = true;
+            this.currentScoreLbl.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.currentScoreLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.currentScoreLbl.Font = new System.Drawing.Font("Book Antiqua", 11.25F, System.Drawing.FontStyle.Bold);
+            this.currentScoreLbl.ForeColor = System.Drawing.Color.Red;
+            this.currentScoreLbl.Location = new System.Drawing.Point(453, 638);
+            this.currentScoreLbl.Name = "currentScoreLbl";
+            this.currentScoreLbl.Size = new System.Drawing.Size(19, 21);
+            this.currentScoreLbl.TabIndex = 23;
+            this.currentScoreLbl.Text = "0";
             // 
             // IdentifyingAreas
             // 
@@ -380,6 +407,8 @@
             this.BackgroundImage = global::Prog7312POETask1.Properties.Resources.OpenBook3;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(873, 680);
+            this.Controls.Add(this.currentScoreLbl);
+            this.Controls.Add(this.scoreLbl);
             this.Controls.Add(this.doneBtn);
             this.Controls.Add(this.restartGamebtn);
             this.Controls.Add(this.GenerateNumbersBtn);
@@ -395,6 +424,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -425,5 +455,7 @@
         private System.Windows.Forms.Label left3;
         private System.Windows.Forms.Label left2;
         private System.Windows.Forms.Button doneBtn;
+        private System.Windows.Forms.Label scoreLbl;
+        private System.Windows.Forms.Label currentScoreLbl;
     }
 }
