@@ -34,6 +34,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.exitAppBtn = new System.Windows.Forms.Button();
+            this.musicBtn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ReplacingBooksBtn
@@ -117,6 +119,34 @@
             this.exitAppBtn.UseVisualStyleBackColor = false;
             this.exitAppBtn.Click += new System.EventHandler(this.exitAppBtn_Click);
             // 
+            // musicBtn
+            // 
+            this.musicBtn.BackColor = System.Drawing.Color.Transparent;
+            this.musicBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.musicBtn.Font = new System.Drawing.Font("Book Antiqua", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.musicBtn.ForeColor = System.Drawing.Color.AntiqueWhite;
+            this.musicBtn.Location = new System.Drawing.Point(12, 12);
+            this.musicBtn.Name = "musicBtn";
+            this.musicBtn.Size = new System.Drawing.Size(86, 34);
+            this.musicBtn.TabIndex = 8;
+            this.musicBtn.Text = "Music on";
+            this.musicBtn.UseVisualStyleBackColor = false;
+            this.musicBtn.Click += new System.EventHandler(this.musicBtn_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Book Antiqua", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.AntiqueWhite;
+            this.button1.Location = new System.Drawing.Point(12, 52);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(86, 34);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Music off";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -124,6 +154,8 @@
             this.BackgroundImage = global::Prog7312POETask1.Properties.Resources.Librarian1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(654, 631);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.musicBtn);
             this.Controls.Add(this.exitAppBtn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -134,7 +166,6 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main Form";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,6 +179,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button exitAppBtn;
+        private System.Windows.Forms.Button musicBtn;
+        private System.Windows.Forms.Button button1;
     }
 }
 

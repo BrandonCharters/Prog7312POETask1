@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Activities" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\IdAreasQuestionGen.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -53,6 +55,18 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\NumberGeneration.cs" />
+    <Compile Include="IdAreaGameRules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IdAreaGameRules.Designer.cs">
+      <DependentUpon>IdAreaGameRules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IdentifyingAreas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IdentifyingAreas.Designer.cs">
+      <DependentUpon>IdentifyingAreas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReplacingBooks.cs">
@@ -69,6 +83,12 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IdAreaGameRules.resx">
+      <DependentUpon>IdAreaGameRules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IdentifyingAreas.resx">
+      <DependentUpon>IdentifyingAreas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

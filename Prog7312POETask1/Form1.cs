@@ -16,6 +16,9 @@ namespace Prog7312POETask1
         //This form will act as the home page of the application.
         //This is where the user selects what game they want ot play.
 
+        //Declaring a variable named sndPlay which is equal to a sample song which has been embedded into the app.
+        private SoundPlayer sndPlay = new SoundPlayer(Prog7312POETask1.Properties.Resources.SampleMusic);
+        
         public Form1()
         {
             InitializeComponent();
@@ -28,7 +31,9 @@ namespace Prog7312POETask1
         /// <param name="e"></param>
         private void IdentifyingAreasBtn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Coming soon...", "---UNDER CONSTRUCTION---", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            IdentifyingAreas identifyingAreas = new IdentifyingAreas();
+            this.Hide();
+            identifyingAreas.Show();
         }
 
         private void FindingCallNumbersBtn_Click(object sender, EventArgs e)
@@ -61,24 +66,14 @@ namespace Prog7312POETask1
         }
         //*********************************************************ooo METHOD END ooo*********************************************************//
 
-        /// <summary>
-        /// FormLoad event for when the form loads then theme music will play in the background of the game
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Form1_Load(object sender, EventArgs e)
+        private void musicBtn_Click(object sender, EventArgs e)
         {
-            try
-            {
-                //Declaring a variable named sndPlay which is equal to a sample song which has been embedded into the app.
-                SoundPlayer sndPlay = new SoundPlayer(Prog7312POETask1.Properties.Resources.SampleMusic);
-                //Plays the sound when the form loads, loops the sound
-                sndPlay.PlayLooping();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + ": " + ex.StackTrace.ToString(), "Error");
-            }
+            sndPlay.PlayLooping();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            sndPlay.Stop();
         }
         //*********************************************************ooo METHOD END ooo*********************************************************//
     }
