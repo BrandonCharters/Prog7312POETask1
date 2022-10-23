@@ -86,49 +86,56 @@ namespace Prog7312POETask1
             x = e.X;
             y = e.Y;
 
-
-            foreach (var textBox in leftTextBoxes)
+            try
             {
-                bool success = false;
-                int x1 = Convert.ToInt32(textBox.Location.X + textBox.Width);
-                int x2 = Convert.ToInt32(e.Location.X);
-                int y1 = Convert.ToInt32(textBox.Location.Y);
-                int y2 = Convert.ToInt32(e.Location.Y);
-                int dx = x1 - x2;
-                int dy = y1 - y2;
-
-                difference = (dx * dx + dy * dy);
-
-                if (difference < 60 * 60)
+                foreach (var textBox in leftTextBoxes)
                 {
-                    success = true;
-                    leftClickAns = textBox.Text;
+                    bool success = false;
+                    int x1 = Convert.ToInt32(textBox.Location.X + textBox.Width);
+                    int x2 = Convert.ToInt32(e.Location.X);
+                    int y1 = Convert.ToInt32(textBox.Location.Y);
+                    int y2 = Convert.ToInt32(e.Location.Y);
+                    int dx = x1 - x2;
+                    int dy = y1 - y2;
 
-                    switch (textBox.Name)
+                    difference = (dx * dx + dy * dy);
+
+                    if (difference < 60 * 60)
                     {
-                        case "leftLbl1":
-                            left1.Text = leftClickAns;
-                            leftLblName = "leftLbl1";
-                            break;
+                        success = true;
+                        leftClickAns = textBox.Text;
 
-                        case "leftLbl2":
-                            left2.Text = leftClickAns;
-                            leftLblName = "leftLbl2";
-                            break;
+                        switch (textBox.Name)
+                        {
+                            case "leftLbl1":
+                                left1.Text = leftClickAns;
+                                leftLblName = "leftLbl1";
+                                break;
 
-                        case "leftLbl3":
-                            left3.Text = leftClickAns;
-                            leftLblName = "leftLbl3";
-                            break;
+                            case "leftLbl2":
+                                left2.Text = leftClickAns;
+                                leftLblName = "leftLbl2";
+                                break;
 
-                        case "leftLbl4":
-                            left4.Text = leftClickAns;
-                            leftLblName = "leftLbl4";
-                            break;
+                            case "leftLbl3":
+                                left3.Text = leftClickAns;
+                                leftLblName = "leftLbl3";
+                                break;
 
+                            case "leftLbl4":
+                                left4.Text = leftClickAns;
+                                leftLblName = "leftLbl4";
+                                break;
+                        }
+
+                        break;
                     }
-                    break;
                 }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+                throw;
             }
         }
 
@@ -147,49 +154,56 @@ namespace Prog7312POETask1
             moving = false;
             x = -1;
             y = -1;
-            
 
-            foreach (var textBox in rightTextBoxes)
+            try
             {
-                bool success = false;
-                int x1 = Convert.ToInt32(textBox.Location.X - 10);
-                int x2 = Convert.ToInt32(e.Location.X);
-                int y1 = Convert.ToInt32(textBox.Location.Y);
-                int y2 = Convert.ToInt32(e.Location.Y);
-                int dx = x1 - x2;
-                int dy = y1 - y2;
-
-                difference = (dx * dx + dy * dy);
-
-                if (difference < 40 * 40)
+                foreach (var textBox in rightTextBoxes)
                 {
-                    success = true;
-                    rightClickAns = textBox.Text;
+                    bool success = false;
+                    int x1 = Convert.ToInt32(textBox.Location.X - 10);
+                    int x2 = Convert.ToInt32(e.Location.X);
+                    int y1 = Convert.ToInt32(textBox.Location.Y);
+                    int y2 = Convert.ToInt32(e.Location.Y);
+                    int dx = x1 - x2;
+                    int dy = y1 - y2;
 
-                    switch (leftLblName)
+                    difference = (dx * dx + dy * dy);
+
+                    if (difference < 40 * 40)
                     {
-                        case "leftLbl1":
-                            right1.Text = rightClickAns;
-                            break;
+                        success = true;
+                        rightClickAns = textBox.Text;
 
-                        case "leftLbl2":
-                            right2.Text = rightClickAns;
-                            break;
+                        switch (leftLblName)
+                        {
+                            case "leftLbl1":
+                                right1.Text = rightClickAns;
+                                break;
 
-                        case "leftLbl3":
-                            right3.Text = rightClickAns;
-                            break;
+                            case "leftLbl2":
+                                right2.Text = rightClickAns;
+                                break;
 
-                        case "leftLbl4":
-                            right4.Text = rightClickAns;
-                            break;
+                            case "leftLbl3":
+                                right3.Text = rightClickAns;
+                                break;
 
+                            case "leftLbl4":
+                                right4.Text = rightClickAns;
+                                break;
+                        }
+
+                        break;
                     }
-                    break;
                 }
-            }
 
-            panel1.Invalidate();
+                panel1.Invalidate();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+                throw;
+            }
         }
 
         private void exitAppBtn_Click(object sender, EventArgs e)
@@ -199,17 +213,33 @@ namespace Prog7312POETask1
 
         private void backBtn_Click(object sender, EventArgs e)
         {
-            Form1 backForm1 = new Form1();
-            this.Hide();
-            backForm1.Show();
+            try
+            {
+                Form1 backForm1 = new Form1();
+                this.Hide();
+                backForm1.Show();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+                throw;
+            }
         }
 
         private void viewRulesBtn_Click(object sender, EventArgs e)
         {
-            IdAreaGameRules gameRules = new IdAreaGameRules();
-            gameRules.Show();
+            try
+            {
+                IdAreaGameRules gameRules = new IdAreaGameRules();
+                gameRules.Show();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+                throw;
+            }
         }
-        
+
         private void GenerateNumbersBtn_Click(object sender, EventArgs e)
         {
             loadGame();
@@ -218,9 +248,9 @@ namespace Prog7312POETask1
         public void layout1()
         {
             Random rand = new Random();
-            
+
             var valueSet = questionGen.DeweyDecimalsDictionary.Values;
-            
+
 
             List<string> lblLstR = new List<string>();
             List<string> lblLstL = new List<string>();
@@ -241,6 +271,7 @@ namespace Prog7312POETask1
                     {
                         r = rand.Next(valueSet.Count);
                     }
+
                     lbl.Text = (string)valueSet.ElementAt(r);
                     lblLstR.Add(lbl.Text);
                 }
@@ -255,11 +286,10 @@ namespace Prog7312POETask1
 
             foreach (var lbl in leftTextBoxes)
             {
-                
                 int r = rand.Next(keySet.Count);
                 string key = (string)keySet.ElementAt(r);
 
-                
+
                 if (!lblLstL.Contains(key))
                 {
                     lbl.Text = key;
@@ -272,17 +302,17 @@ namespace Prog7312POETask1
                         r = rand.Next(keySet.Count);
                         key = (string)keySet.ElementAt(r);
                     }
+
                     lbl.Text = key;
                     lblLstL.Add(lbl.Text);
                 }
-
             }
         }
 
         public void layout2()
         {
             Random rand = new Random();
-            
+
             var keySet = questionGen.DeweyDecimalsDictionary.Keys;
 
             List<string> lblLstR = new List<string>();
@@ -306,10 +336,10 @@ namespace Prog7312POETask1
                         r = rand.Next(keySet.Count);
                         key = (string)keySet.ElementAt(r);
                     }
+
                     lbl.Text = key;
                     lblLstR.Add(lbl.Text);
                 }
-
             }
 
             //Create a valueSet of all the values on the right side
@@ -336,6 +366,7 @@ namespace Prog7312POETask1
                     {
                         r = rand.Next(valueSet.Count);
                     }
+
                     lbl.Text = (string)valueSet.ElementAt(r);
                     lblLstL.Add(lbl.Text);
                 }
@@ -344,34 +375,61 @@ namespace Prog7312POETask1
 
         private void restartGamebtn_Click(object sender, EventArgs e)
         {
-            if (currentScore > 0)
+            try
             {
-                MessageBox.Show($"Well done!! Thanks for playing!!" +
-                                        $"\nYour final score was: {currentScore}", "--WELL DONE!!--", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (currentScore > 0)
+                {
+                    MessageBox.Show($"Well done!! Thanks for playing!!" +
+                                    $"\nYour final score was: {currentScore}", "--WELL DONE!!--", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                }
+
+                panel1.Enabled = false;
+                clearBoxes();
+                currentScore = 0;
+                currentScoreLbl.Text = currentScore.ToString();
             }
-            panel1.Enabled = false;
-            clearBoxes();
-            currentScore = 0;
-            currentScoreLbl.Text = currentScore.ToString();
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+                throw;
+            }
         }
 
         private void IdentifyingAreas_Load(object sender, EventArgs e)
         {
-            clearBoxes();
-            addingLeftTextBoxes();
-            addingRightTextBoxes();
+            try
+            {
+                clearBoxes();
+                addingLeftTextBoxes();
+                addingRightTextBoxes();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+                throw;
+            }
         }
 
         private void doneBtn_Click(object sender, EventArgs e)
         {
-            if (leftLbl1.Text == "Question 1")
+            try
             {
-                MessageBox.Show("No game active, cannot restart!", "--OOPS!!--", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                clearLbls();
+                if (leftLbl1.Text == "Question 1")
+                {
+                    MessageBox.Show("No game active, cannot restart!", "--OOPS!!--", MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+                    clearLbls();
+                }
+                else
+                {
+                    validateAnswers();
+                }
             }
-            else
+            catch (Exception exception)
             {
-                validateAnswers();
+                MessageBox.Show(exception.Message);
+                throw;
             }
         }
 
@@ -424,81 +482,104 @@ namespace Prog7312POETask1
         {
             var dict = questionGen.DeweyDecimalsDictionary;
 
-            //Check if the left labels are empty
-            if (left1.Text == "" || left2.Text == "" || left3.Text == "" || left4.Text == "")
-                MessageBox.Show("Please fill in all the questions!", "--TRY AGAIN!!--", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-            
-            //Check if the right labels are empty
-            else if (right1.Text == "" || right2.Text == "" || right3.Text == "" || right4.Text == "")
-                MessageBox.Show("Please fill in all the answers!", "--TRY AGAIN!!--", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            
-            else
+            try
             {
-                if (num % 2 == 0)
-                {
-                    //Check if the keyValue pair is correct
-                    if (dict[left1.Text] == right1.Text 
-                        && dict[left2.Text] == right2.Text 
-                        && dict[left3.Text] == right3.Text 
-                        && dict[left4.Text] == right4.Text)
-                    {
-                        currentScore += 100;
-                        currentScoreLbl.Text = currentScore.ToString();
-                        MessageBox.Show("Well done!! All the answers were correct!", "--CONGRATULATIONS!!--", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        currentScore -= 50;
-                        currentScoreLbl.Text = currentScore.ToString();
-                        MessageBox.Show("Not all of the answers were correct!", "--TRY AGAIN!!--", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                    clearLbls();
-                    //panel1.Enabled = false;
-                    loadGame();
-                }
+                //Check if the left labels are empty
+                if (left1.Text == "" || left2.Text == "" || left3.Text == "" || left4.Text == "")
+                    MessageBox.Show("Please fill in all the questions!", "--TRY AGAIN!!--", MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+
+                //Check if the right labels are empty
+                else if (right1.Text == "" || right2.Text == "" || right3.Text == "" || right4.Text == "")
+                    MessageBox.Show("Please fill in all the answers!", "--TRY AGAIN!!--", MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+
                 else
                 {
-                    //Check if the keyValue pair is correct
-                    if (dict[right1.Text] == left1.Text 
-                        && dict[right2.Text] == left2.Text 
-                        && dict[right3.Text] == left3.Text 
-                        && dict[right4.Text] == left4.Text)
+                    if (num % 2 == 0)
                     {
-                        currentScore += 100;
-                        currentScoreLbl.Text = currentScore.ToString();
-                        MessageBox.Show("Well done!! All the answers were correct!", "--CONGRATULATIONS!!--", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //Check if the keyValue pair is correct
+                        if (dict[left1.Text] == right1.Text
+                            && dict[left2.Text] == right2.Text
+                            && dict[left3.Text] == right3.Text
+                            && dict[left4.Text] == right4.Text)
+                        {
+                            currentScore += 100;
+                            currentScoreLbl.Text = currentScore.ToString();
+                            MessageBox.Show("Well done!! All the answers were correct!", "--CONGRATULATIONS!!--",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            currentScore -= 50;
+                            currentScoreLbl.Text = currentScore.ToString();
+                            MessageBox.Show("Not all of the answers were correct!", "--TRY AGAIN!!--",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                        }
 
+                        clearLbls();
+                        //panel1.Enabled = false;
+                        loadGame();
                     }
                     else
                     {
-                        currentScore -= 50;
-                        currentScoreLbl.Text = currentScore.ToString();
-                        MessageBox.Show("Not all of the answers were correct!", "--TRY AGAIN!!--", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        //Check if the keyValue pair is correct
+                        if (dict[right1.Text] == left1.Text
+                            && dict[right2.Text] == left2.Text
+                            && dict[right3.Text] == left3.Text
+                            && dict[right4.Text] == left4.Text)
+                        {
+                            currentScore += 100;
+                            currentScoreLbl.Text = currentScore.ToString();
+                            MessageBox.Show("Well done!! All the answers were correct!", "--CONGRATULATIONS!!--",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            currentScore -= 50;
+                            currentScoreLbl.Text = currentScore.ToString();
+                            MessageBox.Show("Not all of the answers were correct!", "--TRY AGAIN!!--",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                        }
+
+                        clearLbls();
+                        //panel1.Enabled = false;
+                        loadGame();
                     }
-                    clearLbls();
-                    //panel1.Enabled = false;
-                    loadGame();
                 }
             }
-
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                throw;
+            }
         }
 
         public void loadGame()
         {
-            panel1.Enabled = true;
-            
-            Random rnd = new Random();
-
-            num = rnd.Next(1, 10);
-
-            if (num % 2 == 0)
+            try
             {
-                layout1();
+                panel1.Enabled = true;
+
+                Random rnd = new Random();
+
+                num = rnd.Next(1, 10);
+
+                if (num % 2 == 0)
+                {
+                    layout1();
+                }
+                else
+                {
+                    layout2();
+                }
             }
-            else
+            catch (Exception e)
             {
-                layout2();
+                MessageBox.Show(e.Message);
+                throw;
             }
         }
     }
