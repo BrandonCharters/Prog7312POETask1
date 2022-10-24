@@ -468,19 +468,18 @@ namespace Prog7312POETask1
         {
             try
             {
-                if (currentScore > 0)
-                {
-                    MessageBox.Show($"Well done!! Thanks for playing!!" +
-                                    $"\nYour final score was: {currentScore}", "--WELL DONE!!--", MessageBoxButtons.OK,
-                        MessageBoxIcon.Information);
-                }
-                else
+                if (panel1.Enabled == true)
                 {
                     MessageBox.Show($"Thanks for playing!!" +
                                     $"\nYour final score was: {currentScore}", "--OH NO!!--", MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
                 }
-
+                else
+                {
+                    MessageBox.Show("No game active, cannot restart!", "--OOPS!!--", MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+                }
+                
                 panel1.Enabled = false;
                 clearBoxes();
                 currentScore = 0;
@@ -527,7 +526,7 @@ namespace Prog7312POETask1
             {
                 if (leftLbl1.Text == "Question 1")
                 {
-                    MessageBox.Show("No game active, cannot restart!", "--OOPS!!--", MessageBoxButtons.OK,
+                    MessageBox.Show("No game active, cannot go to next!", "--OOPS!!--", MessageBoxButtons.OK,
                         MessageBoxIcon.Warning);
                     clearLbls();
                 }
