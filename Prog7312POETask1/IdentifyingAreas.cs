@@ -242,7 +242,16 @@ namespace Prog7312POETask1
 
         private void GenerateNumbersBtn_Click(object sender, EventArgs e)
         {
-            loadGame();
+            clearLbls();
+            if (panel1.Enabled == true)
+            {
+                MessageBox.Show("A game is currently active, can't start new game!");
+            }
+            else
+            {
+                loadGame();
+            }
+            
         }
 
         public void layout1()
