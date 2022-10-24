@@ -8,11 +8,12 @@ using System.Threading.Tasks;
 namespace Prog7312POETask1.Classes
 {
     public class IdAreasQuestionGen
-    {
+    { 
+        //******************************************************************************************************************//       
         //dictionary to store the callnumbers and their description
         private Dictionary<string, string> deweyDecimalsDictionary = new Dictionary<string, string>();
 
-        //----------------------------------------------------------------------------------
+        //******************************************************************************************************************//        
         ///constructor to add call numbers and their descriptions to the dictionary
         public IdAreasQuestionGen()
         {
@@ -28,8 +29,9 @@ namespace Prog7312POETask1.Classes
             DeweyDecimalsDictionary.Add("900", "History and Geography");
         }
 
-        //----------------------------------------------------------------------------------
+        //******************************************************************************************************************//        
         public Dictionary<string, string> DeweyDecimalsDictionary { get => deweyDecimalsDictionary; set => deweyDecimalsDictionary = value; }
-
     }
+    //*********************************************************ooo CLASS END ooo*********************************************************//
 }
+//*********************************************************ooo APP END ooo*********************************************************//

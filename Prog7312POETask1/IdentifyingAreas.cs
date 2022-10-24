@@ -18,31 +18,41 @@ namespace Prog7312POETask1
 {
     public partial class IdentifyingAreas : Form
     {
+        //******************************************************************************************************************//
+        //List of created variables
         private static IdAreasQuestionGen questionGen = new IdAreasQuestionGen();
 
+        //For drawing
         private Graphics g;
         private int x = -1;
         private int y = -1;
         private bool moving = false;
         private Pen pen;
 
+        //For populating the lbls
         private string leftClickAns;
         private string rightClickAns;
         private string leftLblName;
 
+        //For choosing the game, and score
         private int num;
         private int currentScore = 0;
 
-
+        //For invisible radius around the lbls
         private int difference;
 
+        //Lists of left and right Q&A boxes
         private List<Label> leftTextBoxes = new List<Label>();
         private List<Label> rightTextBoxes = new List<Label>();
 
+        //Lists for the left and the right lbls
         private List<Label> leftLabels = new List<Label>();
         private List<Label> rightLabels = new List<Label>();
 
-
+        //******************************************************************************************************************//
+        /// <summary>
+        /// Main class which has code for the drawing of the line.
+        /// </summary>
         public IdentifyingAreas()
         {
             InitializeComponent();
@@ -51,6 +61,10 @@ namespace Prog7312POETask1
             pen.StartCap = pen.EndCap = System.Drawing.Drawing2D.LineCap.Round;
         }
 
+        //******************************************************************************************************************//
+        /// <summary>
+        /// A method for adding the Left lbls to the lists
+        /// </summary>
         public void addingLeftTextBoxes()
         {
             leftTextBoxes.Add(leftLbl1);
@@ -64,6 +78,10 @@ namespace Prog7312POETask1
             leftLabels.Add(left4);
         }
 
+        //******************************************************************************************************************//
+        /// <summary>
+        /// A method for adding the right lbls to the lists
+        /// </summary>
         public void addingRightTextBoxes()
         {
             rightTextBoxes.Add(rightLbl1);
@@ -80,6 +98,14 @@ namespace Prog7312POETask1
             rightLabels.Add(right4);
         }
 
+        //******************************************************************************************************************//        
+        /// <summary>
+        /// A mouseDown event for the start of the drawing line to take place.
+        /// Checks which lbl the mouse is closest too when pressed down.
+        /// Populates the leftLbls with the chosen questions.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
             moving = true;
@@ -139,6 +165,12 @@ namespace Prog7312POETask1
             }
         }
 
+        //******************************************************************************************************************//
+        /// <summary>
+        /// Mouse move event for the drawing of the line to take place.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void panel1_MouseMove(object sender, MouseEventArgs e)
         {
             if (moving && x != -1 && y != -1)
@@ -149,6 +181,14 @@ namespace Prog7312POETask1
             }
         }
 
+        //******************************************************************************************************************//
+        /// <summary>
+        /// MouseUp event for the end of the drawing line to take place.
+        /// Checks which lbl the mouse is closest too when released.
+        /// Populates the rightLbls with the answers.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void panel1_MouseUp(object sender, MouseEventArgs e)
         {
             moving = false;
@@ -197,7 +237,7 @@ namespace Prog7312POETask1
                     }
                 }
 
-                panel1.Invalidate();
+                panel1.Invalidate(); //Clears the line after drawing
             }
             catch (Exception exception)
             {
@@ -206,11 +246,23 @@ namespace Prog7312POETask1
             }
         }
 
+        //******************************************************************************************************************//
+        /// <summary>
+        /// Btn to exit the app
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void exitAppBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        //******************************************************************************************************************//
+        /// <summary>
+        /// Btn to go back to the game select screen.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void backBtn_Click(object sender, EventArgs e)
         {
             try
@@ -226,6 +278,12 @@ namespace Prog7312POETask1
             }
         }
 
+        //******************************************************************************************************************//
+        /// <summary>
+        /// Btn to display the rules of the game to the user.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void viewRulesBtn_Click(object sender, EventArgs e)
         {
             try
@@ -240,6 +298,13 @@ namespace Prog7312POETask1
             }
         }
 
+        //******************************************************************************************************************//        
+        /// <summary>
+        /// Btn to populate the left and the right lbls with the call numbers and their descriptions.
+        /// First checks if the panel is active, if it is then the button will be disabled.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void GenerateNumbersBtn_Click(object sender, EventArgs e)
         {
             clearLbls();
@@ -254,6 +319,11 @@ namespace Prog7312POETask1
             
         }
 
+        //******************************************************************************************************************//
+        /// <summary>
+        /// Method which has the layout for when the descriptions will be populated on the rightside and the callnumbers on the left.
+        /// Once the right values are generated then the keys of those values will be randomized and populated into the left side.
+        /// </summary>
         public void layout1()
         {
             Random rand = new Random();
@@ -318,6 +388,11 @@ namespace Prog7312POETask1
             }
         }
 
+        //******************************************************************************************************************//
+        /// <summary>
+        /// Method which has the layout for when the callnumbers will be populated on the rightside and the descriptions on the left.
+        /// Once the right values are generated then the keys of those values will be randomized and populated into the left side. 
+        /// </summary>
         public void layout2()
         {
             Random rand = new Random();
@@ -382,6 +457,13 @@ namespace Prog7312POETask1
             }
         }
 
+        //******************************************************************************************************************//
+        /// <summary>
+        /// Btn to restart the game
+        /// This will display the final score to the user aswell
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void restartGamebtn_Click(object sender, EventArgs e)
         {
             try
@@ -390,6 +472,12 @@ namespace Prog7312POETask1
                 {
                     MessageBox.Show($"Well done!! Thanks for playing!!" +
                                     $"\nYour final score was: {currentScore}", "--WELL DONE!!--", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show($"Thanks for playing!!" +
+                                    $"\nYour final score was: {currentScore}", "--OH NO!!--", MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
                 }
 
@@ -405,6 +493,12 @@ namespace Prog7312POETask1
             }
         }
 
+        //******************************************************************************************************************//
+        /// <summary>
+        /// On page load the boxes will be cleared and the lbls will be added to their lists
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void IdentifyingAreas_Load(object sender, EventArgs e)
         {
             try
@@ -420,6 +514,13 @@ namespace Prog7312POETask1
             }
         }
 
+        //******************************************************************************************************************//
+        /// <summary>
+        /// Btn click for when the user wants to check their answers and play the next round.
+        /// Cannot press this button if the game is not active.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void doneBtn_Click(object sender, EventArgs e)
         {
             try
@@ -442,6 +543,10 @@ namespace Prog7312POETask1
             }
         }
 
+        //******************************************************************************************************************//
+        /// <summary>
+        /// Method to reset the lbls to their initial state
+        /// </summary>
         public void clearBoxes()
         {
             //Reset all the question labels texts to be question1 - question4
@@ -472,6 +577,10 @@ namespace Prog7312POETask1
             right4.Text = "";
         }
 
+        //******************************************************************************************************************//
+        /// <summary>
+        /// Method to reset the lbls to their initial state
+        /// </summary>
         public void clearLbls()
         {
             //Reset all the left labels texts to be empty
@@ -487,6 +596,10 @@ namespace Prog7312POETask1
             right4.Text = "";
         }
 
+        //******************************************************************************************************************//
+        /// <summary>
+        /// Validate the answers that are in the left and the right lbls and check if they are a correct value pair.
+        /// </summary>
         public void validateAnswers()
         {
             var dict = questionGen.DeweyDecimalsDictionary;
@@ -528,7 +641,6 @@ namespace Prog7312POETask1
                         }
 
                         clearLbls();
-                        //panel1.Enabled = false;
                         loadGame();
                     }
                     else
@@ -554,7 +666,6 @@ namespace Prog7312POETask1
                         }
 
                         clearLbls();
-                        //panel1.Enabled = false;
                         loadGame();
                     }
                 }
@@ -566,6 +677,10 @@ namespace Prog7312POETask1
             }
         }
 
+        //******************************************************************************************************************//
+        /// <summary>
+        /// Method to load the game, this will generate a number between 1-10 and if the number is even then the game will populate with layout1, else layout2
+        /// </summary>
         public void loadGame()
         {
             try
@@ -592,4 +707,6 @@ namespace Prog7312POETask1
             }
         }
     }
+    //*********************************************************ooo CLASS END ooo*********************************************************//
 }
+//*********************************************************ooo APP END ooo*********************************************************//
