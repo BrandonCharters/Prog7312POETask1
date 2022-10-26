@@ -1,11 +1,19 @@
-Brandon Charters ST10114536 PROG_POE_Task1
-Replacing books game
+Brandon Charters ST10114536 PROG_POE
+Identifying Areas game.
 
 -----------------------------------------------------
 ** Brief description of application **
 -----------------------------------------------------
-The app is a WinForms application which consists of the home page where the user will be able to choose what game they want to play. At the moment the user will only be able to select the replacing books game.The other pages of the application are the game page itself, this is where the user will play the replacing books game. And the final page is the rule form, this form is shown to the user when the rule button on the game page is pressed.
-The game involves the user dragging and dropping unsorted books from one listbox to the other in the correct order, there are varying difficulty levels to the game such as easy, medium, and hard.
+The app is a WinForms application which consists of the home page where the user will be able to choose what game they want to play. The current list of games are as follows:
+• Replacing books game.
+• Identifying Areas game.
+• Finding call numbers game. (Not done yet)
+
+--The replacing books game involves the user dragging and dropping unsorted books from one listbox to the other in the correct order, there are varying difficulty levels to the game such as easy, medium, and hard.
+
+--The Identifying Areas game involves the user having to match the call numbers with their descriptions by drawing a line between the two, their is a point system has been made to reward the user for getting answers correct and discorages getting them wrong.
+
+--The Finding call numbers game is not done yet...
 
 -----------------------------------------------------
 ** Technologies Used **
@@ -27,6 +35,8 @@ The file I have submitted is a zip file, you will need to unzip it to access my 
 Once unzipped follow through the folders until reaching a folder named "Prog7312POETask1.sln" , you will be required to open the 
 “.sln” file in VS2022 which has the visual studio image next to it. 
 
+You also have the ability to run the app through the exe file which i have created in the root folder of the app.
+
 Once the application has loaded, right click on the solution file on the right side and build the solution.
 Once that is complete, to run the application you will need to press on the green arrow at the top of the 
 page. 
@@ -34,8 +44,11 @@ page.
 -----------------------------------------------------
 ** Running the application **
 -----------------------------------------------------
-When you run the app, you will be displayed the homepage of the app. On this page you will see the option to play three different games, only the replacing books game is available at the moment.
+When you run the app, you will be displayed the homepage of the app. On this page you will see the option to play three different games.
 
+-----------------------------------------------------
+** Replacing Books game **
+-----------------------------------------------------
 Press on the replacing books button to be taken to the game page.
 
 Once on the game page, you will have the ability to look at the rules of the game by pressing the “rules” button in the top left hand corner of the screen.
@@ -55,11 +68,32 @@ If the timer runs out then you will be given the choice to play the game again o
 At any moment in time you can press the X in the top right corner of the pages to exit the app.
 
 -----------------------------------------------------
+** Identifying Areas game **
+-----------------------------------------------------
+Press the identifying Areas button to be taken to the game page.
+
+Once on the game page, you will have the ability to look at the rules of the game by pressing the “rules” button in the top left hand corner of the screen.
+
+Once you have read how the game is played then you will be required to press the start button to play the game.
+
+When the game starts the left and the right side labels will be populated with the call numbers as well as their descriptions. The side at which these are specifically generated is rendomly decided.
+
+You will have the ability to draw lines between the call numbers and their descriptions by using your mouse. Once you have connected all of the questions to their answers then you will need to press the "Next" button.
+
+You will then be given points if you got the questions correct, and deducted points if you got them wrong.
+
+The "Next" button will then take you to the next round of questions.
+
+If you wish to reset or end at anypoint, press the "Restart" button.
+
+At any moment in time you can press the X in the top right corner of the pages to exit the app or press the "Back" button to go back to the main page.
+
+-----------------------------------------------------
 ** Other Notes **
 -----------------------------------------------------
  
 run the app from either the c-drive to be safe that no issues occur.
 
-enjoy the game!!
+enjoy the games!!
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
