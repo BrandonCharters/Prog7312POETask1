@@ -38,7 +38,9 @@ namespace Prog7312POETask1
 
         private void FindingCallNumbersBtn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Coming soon...", "---UNDER CONSTRUCTION---", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            FindingCallNum findingNum = new FindingCallNum();
+            this.Hide();
+            findingNum.Show();
         }
         //*********************************************************ooo METHOD END ooo*********************************************************//
 

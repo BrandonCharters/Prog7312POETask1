@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CallNumGameRules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CallNumGameRules.Designer.cs">
+      <DependentUpon>CallNumGameRules.cs</DependentUpon>
+    </Compile>
     <Compile Include="Classes\IdAreasQuestionGen.cs" />
     <Compile Include="FindingCallNum.cs">
       <SubType>Form</SubType>
@@ -87,6 +93,12 @@
     <Compile Include="RulesForGame.Designer.cs">
       <DependentUpon>RulesForGame.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CallNumGameRules.resx">
+      <DependentUpon>CallNumGameRules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindingCallNum.resx">
+      <DependentUpon>FindingCallNum.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,6 +163,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\SampleMusic.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OpenBook5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Openbook6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OpenScroll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bookStack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bookstack2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
