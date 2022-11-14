@@ -63,6 +63,26 @@ namespace Prog7312POETask1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bookStack {
+            get {
+                object obj = ResourceManager.GetObject("bookStack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bookstack2 {
+            get {
+                object obj = ResourceManager.GetObject("bookstack2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Librarian1 {
             get {
                 object obj = ResourceManager.GetObject("Librarian1", resourceCulture);
@@ -96,6 +116,36 @@ namespace Prog7312POETask1.Properties {
         internal static System.Drawing.Bitmap OpenBook3 {
             get {
                 object obj = ResourceManager.GetObject("OpenBook3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OpenBook5 {
+            get {
+                object obj = ResourceManager.GetObject("OpenBook5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Openbook6 {
+            get {
+                object obj = ResourceManager.GetObject("Openbook6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OpenScroll {
+            get {
+                object obj = ResourceManager.GetObject("OpenScroll", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
