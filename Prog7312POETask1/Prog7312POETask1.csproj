@@ -48,6 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\IdAreasQuestionGen.cs" />
+    <Compile Include="FindingCallNum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindingCallNum.Designer.cs">
+      <DependentUpon>FindingCallNum.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
