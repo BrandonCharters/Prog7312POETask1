@@ -1,5 +1,5 @@
 Brandon Charters ST10114536 PROG_POE
-Identifying Areas game.
+Final POE
 
 -----------------------------------------------------
 ** Brief description of application **
@@ -7,13 +7,13 @@ Identifying Areas game.
 The app is a WinForms application which consists of the home page where the user will be able to choose what game they want to play. The current list of games are as follows:
 • Replacing books game.
 • Identifying Areas game.
-• Finding call numbers game. (Not done yet)
+• Finding call numbers game.
 
 --The replacing books game involves the user dragging and dropping unsorted books from one listbox to the other in the correct order, there are varying difficulty levels to the game such as easy, medium, and hard.
 
 --The Identifying Areas game involves the user having to match the call numbers with their descriptions by drawing a line between the two, their is a point system has been made to reward the user for getting answers correct and discorages getting them wrong.
 
---The Finding call numbers game is not done yet...
+--The Finding call numbers game involves the user having to select the correct categories based on the generated question, they will do this by pressing on the correct answers with their mouse.
 
 -----------------------------------------------------
 ** Technologies Used **
@@ -39,7 +39,7 @@ You also have the ability to run the app through the exe file which i have creat
 
 Once the application has loaded, right click on the solution file on the right side and build the solution.
 Once that is complete, to run the application you will need to press on the green arrow at the top of the 
-page. 
+page (make sure dubug is selected at the top of the page). 
 
 -----------------------------------------------------
 ** Running the application **
@@ -88,6 +88,22 @@ If you wish to reset or end at anypoint, press the "Restart" button.
 
 At any moment in time you can press the X in the top right corner of the pages to exit the app or press the "Back" button to go back to the main page.
 
+-----------------------------------------------------
+** Finding Call Numbers game **
+-----------------------------------------------------
+Press the Finding call numbers game button to be taken to the game page.
+
+Once on the game page, you will have the ability to look at the rules of the game by pressing the “rules” button in the top left hand corner of the screen.
+
+Once you have read how the game is played then you will be required to press the start button to play the game.
+
+When the game starts a question and four answers will be generated, you will be required to select the correct answer category based on the question, by clicking on the correct one.
+
+The current question you are on will be tracked as well as scoring for the game.
+
+If you do not feel like playing anymore press the end game button to view your total score as well as the question you ended on.
+
+At any moment in time you can press the X in the top right corner of the pages to exit the app or press the "Back" button to go back to the main page.
 -----------------------------------------------------
 ** Other Notes **
 -----------------------------------------------------

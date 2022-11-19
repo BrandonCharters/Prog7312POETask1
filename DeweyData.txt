@@ -1,0 +1,210 @@
+000_Generalities
+030_General encyclopedic works
+031_General encyclopedic works — American 
+032_General encyclopedic works in English 
+033_General encyclopedic works in other Germanic languages 
+034_General encyclopedic works in French, Provencal, Catalan
+050_General serials & their indexes
+051_General serials & their indexes American 
+052_General serials & their indexes In English 
+053_General serials & their indexes In other Germanic languages
+054_General serials & their indexes In French, Provencal, Catalan
+060_General organization & museology
+061_General organization & museology In North America 
+062_General organization & museology In British Isles In England 
+063_General organization & museology In central Europe In Germany 
+064_General organization & museology In France & Monaco
+070_News media, journalism, publishing
+071_News media, journalism, publishing In North America 
+072_News media, journalism, publishing In British Isles In England 
+073_News media, journalism, publishing In central Europe In Germany 
+074_News media, journalism, publishing In France & Monaco
+100_Philosophy & psychology
+150_Psychology
+152_Perception, movement, emotions, drives
+153_Mental processes & intelligence
+154_Subconscious & altered states
+155_Differential & developmental psychology
+160_Logic
+161_Induction
+162_Deduction
+165_Fallacies & sources of error
+166_Syllogisms
+170_Ethics
+171_Systems & doctrines
+172_Political ethics
+173_Ethics of family relationships
+174_Economic & professional ethics
+180_Ancient, medieval, Oriental philosophy
+181_Oriental philosophy
+182_Pre-Socratic Greek philosophies
+183_Sophistic & Socratic philosophies
+184_Platonic philosophy
+200_Religion
+210_Natural theology
+211_Concepts of God
+212_Existence, attributes of God
+213_Creation
+214_Theodicy
+220_Bible
+221_Old Testament
+222_Historical books of Old Testament
+223_Poetic books of Old Testament
+224_Prophetic books of Old Testament
+230_Christian theology
+231_God
+232_Jesus Christ & his family
+233_Humankind
+234_Salvation & grace
+240_Christian moral & devotional theology
+241_Moral theology
+242_Devotional literature
+243_Evangelistic writings for individuals
+245_Texts of hymns
+300_Social sciences
+310_General statistics, Almanacs
+314_General statistics of Europe
+315_General statistics of Asia
+316_General statistics of Africa
+317_General statistics of North America
+320_Political science
+321_Systems of governments & states
+322_Relation of state to organized groups
+323_Civil & political rights
+324_The political process
+330_Economics
+331_Labor economics
+332_Financial economics
+333_Land economics
+334_Cooperatives
+340_Law
+341_International law
+342_Constitutional & administrative law
+343_Military, tax, trade, industrial law
+344_Social, labor, welfare, & related law
+400_Language
+410_Linguistics
+411_Writing systems
+412_Etymology, word origins
+413_Dictionaries
+414_Phonology
+420_English & Old English
+421_English writing system & phonology
+422_English etymology, word origins
+423_English dictionaries
+425_English grammar
+430_Germanic languages; German
+431_German writing system & phonology
+432_German etymology
+433_German dictionaries
+435_German grammar
+440_Romance languages; French
+441_French writing system & phonology
+442_French etymology
+443_French dictionaries
+445_French grammar
+500_Natural sciences & mathematics
+510_Mathematics
+511_General topics
+512_Algebra & number theory
+513_Arithmetic
+514_Topology
+520_Astronomy & allied sciences
+521_Celestial mechanics
+522_Techniques, equipment, materials
+523_Specific celestial bodies & phenomena
+525_Earth
+530_Physics
+531_Classical mechanics; Solid mechanics
+532_Fluid mechanics; Liquid mechanics
+533_Gas mechanics
+534_Sound & related vibrations
+540_Chemistry & allied sciences
+541_Physical & theoretical chemistry
+542_Techniques, equipment, materials
+543_Analytical chemistry
+544_Qualitative analysis
+600_Technology
+610_Medical sciences; Medicine
+611_Human anatomy, cytology, histology
+612_Human physiology
+613_Promotion of health
+614_Incidence & prevention of disease
+620_Engineering & allied operations
+621_Applied physics
+622_Mining & related operations
+623_Military & nautical engineering
+624_Civil engineering
+630_Agriculture
+631_Techniques, equipment, materials
+632_Plant injuries, diseases, pests
+633_Field & plantation crops
+634_Orchards, fruits, forestry
+640_Home economics & family living
+641_Food & drink
+642_Meals & table service
+643_Housing & household equipment
+644_Household utilities
+700_The arts
+710_Civic & landscape art
+711_Area planning (Civic art)
+712_Landscape architecture
+713_Landscape architecture of traffic ways
+714_Water features
+720_Architecture
+721_Architectural structure
+722_Architecture to ca   300
+723_Architecture from ca   300 to 1399
+724_Architecture from 1400
+730_Plastic arts; Sculpture
+731_Processes, forms, subjects of sculpture
+732_Sculpture to ca   500
+733_Greek, Etruscan, Roman sculpture
+734_Sculpture from ca   500 to 1399
+740_Drawing & decorative arts
+741_Drawing & drawings
+742_Perspective
+743_Drawing & drawings by subject
+745_Decorative arts
+800_Literature & rhetoric
+810_American or Canadian literature in English
+811_Poetry
+812_Drama
+813_Fiction
+814_Essays
+820_English literature in English
+821_Poetry
+822_Drama
+823_Fiction
+824_Essays
+830_Literatures of Germanic languages
+831_German poetry
+832_German drama
+833_German fiction
+834_German essays
+840_Literatures of Romance languages
+841_French poetry
+842_French drama
+843_French fiction
+844_French essays
+900_Geography & history
+910_Geography & travel
+911_Historical geography
+912_Graphic representations of earth, atlases
+913_Ancient world
+914_Europe
+930_History of ancient world
+931_China
+932_Egypt
+933_Palestine
+934_India
+940_General history of Europe
+941_British Isles
+942_England & Wales
+943_Central Europe; Germany
+944_France & Monaco
+950_General history of Asia Far East
+951_General history of Asia China & adjacent areas 
+952_General history of Asia Japan 
+953_General history of Asia Arabian Peninsula & adjacent areas 
+954_General history of Asia South Asia India
