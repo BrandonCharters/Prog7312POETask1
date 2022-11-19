@@ -53,6 +53,7 @@
     <Compile Include="CallNumGameRules.Designer.cs">
       <DependentUpon>CallNumGameRules.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classes\BookTreeModel.cs" />
     <Compile Include="Classes\IdAreasQuestionGen.cs" />
     <Compile Include="FindingCallNum.cs">
       <SubType>Form</SubType>
