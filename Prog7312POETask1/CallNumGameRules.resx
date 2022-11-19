@@ -119,17 +119,17 @@
   </resheader>
   <data name="richTextBox1.Text" xml:space="preserve">
     <value>--Game Rules--
-You are a new librarian whose second job is as follows:
+You are a new librarian whose third job is as follows:
 
-–Match the questions on the left side with the answers on the right (Such as call numbers and descriptions).
+–Choose the correct categories based on the question that has been generated.
 
-–This is done by drawing a line from the question to the answer (You can't draw from the answer to the question).
+–This is done by clicking on the correct answer which is being displayed on the four buttons.
 
-–When you are ready to play, press the “Start” button, this will generate all the values.
+–If you manage to get the first answer right, you will be required to select another answer.
 
-–When you are done linking the questions and the answers you will need to press the "Next" button.
+–When you are ready to start the game press the "Start game" button
 
-–If you want to reset the game at anytime, press the "Restart" button.
+–If you dont want to play anymore press the "End game" button and your final score and the question made it to will be displayed.
 
 --GOODLUCK AND HAVE FUN!</value>
   </data>
